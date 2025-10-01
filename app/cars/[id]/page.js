@@ -24,7 +24,7 @@ export default function CarDetailPage({ params }) {
         <div className="text-center">
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Car Not Found</h2>
-          <p className="text-gray-600 mb-8">The car you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-600 mb-8">The car you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Link href="/cars" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors">
             Browse All Cars
           </Link>
@@ -64,21 +64,20 @@ export default function CarDetailPage({ params }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="space-y-6">
-            <CarImageSlider 
-              images={car.images} 
-              images360={car.images360} 
+            <CarImageSlider
+              images={car.images}
+              images360={car.images360}
               carName={car.name}
               currentIndex={activeImage}
               setCurrentIndex={setActiveImage}
             />
-            
+
             <div className="grid grid-cols-4 gap-2">
               {car.images.map((img, i) => (
-                <div 
-                  key={i} 
-                  className={`relative h-20 bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition-all duration-200 ${
-                    i === activeImage ? 'ring-2 ring-blue-500 ring-offset-2' : ''
-                  }`}
+                <div
+                  key={i}
+                  className={`relative h-20 bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition-all duration-200 ${i === activeImage ? 'ring-2 ring-blue-500 ring-offset-2' : ''
+                    }`}
                   onClick={() => setActiveImage(i)}
                 >
                   <Image
